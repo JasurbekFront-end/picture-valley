@@ -9,8 +9,8 @@ export default function UserProfile() {
     localStorage.getItem("collectedImages") || "[]",
   ) as PhotoType[];
 
-  const previewLikedImage = likedImages[likedImages.length - 1];
-  const previewCollectedImage = collectedImages[collectedImages.length - 1];
+  const previewLikedImage = likedImages[0];
+  const previewCollectedImage = collectedImages[0];
   const navigate = useNavigate();
   function handleNavigate(pathname: string) {
     navigate(`${pathname}`);
