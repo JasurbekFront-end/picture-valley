@@ -9,10 +9,12 @@ import NotFound from "./pages/not-found/not-found";
 import UserProfile from "./pages/user/user-profile";
 import UserLiked from "./pages/user/user-liked";
 import UserCollected from "./pages/user/user-collected";
+import ScrollTo from "./scrollto";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollTo/>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Navigate to="/home" replace />} />
