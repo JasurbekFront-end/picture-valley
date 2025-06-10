@@ -15,7 +15,7 @@ export default function UserCollected() {
         <ImagesWrapper columns={columns} />
       ) : (
         <div className="flex w-full items-center justify-center font-poppins text-[20px] pt-10">
-          There are not collected pictures
+          TThe pictures have not been collected.
         </div>
       )}
     </div>

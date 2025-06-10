@@ -15,7 +15,7 @@ export default function UserLiked() {
         <ImagesWrapper columns={columns} />
       ) : (
         <div className="flex w-full items-center justify-center font-poppins text-[20px] pt-10">
-          There are not liked pictures
+          The pictures have not been liked.
         </div>
       )}
     </div>
