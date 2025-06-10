@@ -69,9 +69,9 @@ export default function ImagesWrapper({ columns }: ImagesWrapperProps) {
   return (
     <>
       {" "}
-      <div className="grid grid-cols-1 gap-x-6 px-2 md:grid-cols-2 lg:grid-cols-3 lg:px-10 lg:py-6">
+      <div className="grid grid-cols-1 gap-6 px-2 md:grid-cols-2 lg:grid-cols-3 lg:px-10 lg:py-6">
         {columns.map((column, idx) => (
-          <div key={idx} className="flex flex-col gap-8">
+          <div key={idx} className="flex flex-col gap-8 ">
             {column.map((image) => (
               <ImageBox
                 key={image.id}
