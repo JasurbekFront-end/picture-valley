@@ -30,7 +30,7 @@ export default function ImageModal({
 
   return (
     <div
-      className={`fixed inset-0 z-[100] overflow-y-auto bg-black/70  pb-8 transition-all duration-300 ease-in-out flex items-center justify-center  ${isModalOpened ? "visible translate-y-0 opacity-100" : "invisible translate-y-10 opacity-0"} `}
+      className={`fixed inset-0 z-[100] overflow-y-auto bg-black/70  pb-8 transition-all duration-300 ease-in-out pt-15 lg:pt-3   ${isModalOpened ? "visible translate-y-0 opacity-100" : "invisible translate-y-10 opacity-0"} `}
     >
       <div className="mx-auto w-[90%] rounded-md bg-white shadow-lg lg:w-[70%]">
         <div
