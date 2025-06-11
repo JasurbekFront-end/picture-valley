@@ -72,7 +72,7 @@ export default function Navbar({ toggleMenu }: NavbarProps) {
             required
             onChange={(e) => setInputValue(e.target.value)}
             onFocus={() => setIsFocused(true)}
-            onBlur={() => setTimeout(() => setIsFocused(false), 100)}
+            onBlur={() => setTimeout(() => setIsFocused(false), 300)}
             placeholder="Search..."
             className="h-[40px] w-full rounded-md bg-gray-200 indent-3 focus:shadow focus:outline-0 lg:h-[45px]"
           />
@@ -87,8 +87,7 @@ export default function Navbar({ toggleMenu }: NavbarProps) {
                       prev.filter((_, i) => i !== idx),
                     )
                   }
-                  onMouseDown={() => setIsFocused(true)}
-                  onSearchSaved={(value: string) => handleSearchNavigate(value)}
+                  onSearchSaved={handleSearchNavigate}
                 />
               ))}
             </div>
