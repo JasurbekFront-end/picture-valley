@@ -4,10 +4,10 @@ import DownloadButton from "./download-button";
 
 interface ImageBoxProps {
   image: PhotoType;
-  onClick:()=>void
+  onClick: () => void;
 }
 
-export default function ImageBox({ image,onClick }: ImageBoxProps) {
+export default function ImageBox({ image, onClick }: ImageBoxProps) {
   const [isHover, setIsHover] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -47,7 +47,13 @@ export default function ImageBox({ image,onClick }: ImageBoxProps) {
         >
           <div className="absolute top-[15px] left-[20px] flex cursor-pointer items-center gap-3">
             <div className="custom-ava-back size-[50px] rounded-full" />
-            <h1 className="font-poppins text-white">{image.photographer}</h1>
+            <a
+              href={image.photographer_url}
+              target="blank"
+              className="font-poppins text-white"
+            >
+              {image.photographer}
+            </a>
           </div>
           <div className="absolute top-3 right-3">
             <DownloadButton imageUrl={image.src.original} />
@@ -55,6 +61,7 @@ export default function ImageBox({ image,onClick }: ImageBoxProps) {
           <div className="absolute bottom-3 left-5">
             <a
               href={image.photographer_url}
+              target="blank"
               className="font-poppins text-[12px] text-white"
             >
               {image.photographer_url}

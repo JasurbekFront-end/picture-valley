@@ -4,7 +4,8 @@ interface DownloadButtonProps{
 }
 
 export default function DownloadButton({imageUrl}:DownloadButtonProps) {
-  const handleDownload = async () => {
+  const handleDownload = async (e:React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation()
     const response = await fetch(imageUrl);
     const blob = await response.blob();
     const url = URL.createObjectURL(blob);
@@ -21,7 +22,7 @@ export default function DownloadButton({imageUrl}:DownloadButtonProps) {
 
   return (
     <button
-      onClick={handleDownload}
+      onClick={(e)=>handleDownload(e)}
       className="font-poppins flex cursor-pointer items-center justify-center rounded-md bg-green-400 px-4 py-3 text-[16px] text-white"
     >
       Downlaod
